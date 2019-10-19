@@ -79,7 +79,7 @@ Khác với Xử lý ảnh:
 - **Đẩu vào**: Ảnh 
 - **Đầu ra**: Ảnh
 
-Với đầu vào là ảnh, TGMT hướng tới đầu ra là .. "**hiểu**" bức ảnh. Khi bạn sinh ra, ban đầu bạn sẽ thấy mờ mờ một chút, rồi đột nhiên, bạn thấy và hiểu mọi thứ. Việc nhìn thấy này có vẻ rất đơn giản đối với chúng ta, nhưng với máy tính thì sao?
+Với đầu vào là ảnh, TGMT hướng tới đầu ra là .. "**hiểu**" bức ảnh. Việc **hiểu** này có vẻ rất đơn giản đối với chúng ta, bởi lẽ, khi bạn sinh ra, ban đầu bạn sẽ thấy mờ mờ một chút, rồi đột nhiên, bạn thấy và hiểu mọi thứ tự nhiên đến lạ! Trong các ví dụ tiếp theo, chúng ta cùng tìm hiểu xem việc **hiểu** là như thế nào nhé.
 
 ## 2.1. Hiệu ứng Đổ bóng bàn cờ Adelson
 
@@ -99,7 +99,7 @@ Ok, giả sử bạn có một cái photometer (thước đo ánh sáng) và b�
 <center><b> Ảnh 6. </b> Hiệu ứng đổ bóng bàn cờ với photometer</center>
 Voila! Photometer sẽ cho bạn thấy rằng A và B đều có số photon như nhau. Như vậy là A và B có màu hoàn toàn giống nhau sao? 
 
-Đúng vậy, bức hình này tạo ra một ảo ảnh thị giác rằng ô vuông A có vẻ như có màu đậm hơn ô vuông B... hoặc là do não của bạn nghĩ rằng đó là một ô sáng nhưng chả qua nó chỉ được đổ bóng thôi? Từ đó, bạn có thể thấy nguyên nhân tại sao Computer Vision là 1 bài toán khó.
+Đúng vậy, bức hình này tạo ra một ảo ảnh thị giác rằng ô vuông A có vẻ như có màu đậm hơn ô vuông B... hoặc là do não của bạn nghĩ rằng đó là một ô sáng nhưng chả qua nó chỉ được đổ bóng thôi? Nhưng chắc chắn 1 điều rằng, đối với máy tính, vùng A và B có màu giống nhau (Vì chúng có cùng intensity mà!)
 
 ## 2.2.  Hiệu ứng đổ bóng Kersten
 
@@ -124,7 +124,7 @@ Một lần nữa,  **Nhìn thấy** không chỉ đơn thuần là **một thô
 
 <center><img src='https://foundlingmuseum.org.uk/wp-content/uploads/2015/12/Stereoscope-in-The-Fallen-Woman-848x400.jpg' width=400></center>
 <center><b> Ảnh 9. </b> Stereoscope - <i> Wikipedia </i></center>
-**Kính lập thể** (stereoscope) là một loại thiết bị dùng để xem một cặp ảnh riêng biệt ở dạng lập thể hay dạng ảnh nổi, với nguyên tắc mắt phải và mắt trái nhìn vào cùng một cảnh trên hai ảnh. [6] (Về phần stereo vision mình sẽ chia sẻ trong các số tiếp theo 😀)
+**Kính lập thể** (stereoscope) là một loại thiết bị dùng để xem một cặp ảnh riêng biệt ở dạng lập thể hay dạng ảnh nổi, với nguyên tắc mắt phải và mắt trái nhìn vào cùng một cảnh trên hai ảnh. [6] Về phần stereo vision mình sẽ chia sẻ trong các số tiếp theo 😀.
 
 <center><img src='https://media1.giphy.com/media/qETVHTMHfkhOM/giphy.gif' width=400></center>
 <center><b> Ảnh 10. </b> Một bức hình stereoscope của một phụ nữ đang sử dụng stereoscope - <i> tumblr </i></center>
@@ -180,7 +180,7 @@ Ngoài các thành tựu về kĩ thuật, TGMT cũng gần như là một "di�
 
 <center><img src='https://abm-website-assets.s3.amazonaws.com/rdmag.com/s3fs-public/embedded_image/2017/04/lung%20cancer.jpg' width=400></center>
 <center><b> Ảnh 16. </b> Chẩn đoán ung thư phổi trên ảnh X-quang [4]</center>
-Qua phần 1, bạn đã tìm hiểu được Computer Vision là gì. Mời bạn xem tiếp <a href='../gioi-thieu-tgmt-2'> phần 2 </a> để tìm hiểu thêm về Computer Vision nhé!
+Qua phần 1, bạn đã hiểu được cơ bản Computer Vision là gì. Mời bạn xem tiếp <a href='../gioi-thieu-tgmt-2'> phần 2 </a> để tìm hiểu thêm về Computer Vision nhé!
 
 # Tham khảo
 

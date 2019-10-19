@@ -17,9 +17,9 @@ Qua bài trước, bạn đã tìm hiểu được TGMT là gì. Ở bài này, 
 
 {{% toc %}}
 
-# 4. Computer Vision không dễ
+# 4. TGMT không dễ
 
-Computer Vision là một lĩnh vực thú vị, tuy nhiên còn tồn tại nhiều thách thức, từ những thách thức đơn giản tới những thách thức rất tinh tế! 
+TGMT là một lĩnh vực thú vị, tuy nhiên còn tồn tại nhiều thách thức, từ những thách thức đơn giản tới những thách thức rất tinh tế! 
 
 ## 4.1. Mơ hồ về nội dung
 
@@ -49,9 +49,11 @@ Hoho bằng kinh nghiệm dày dặn của mình bạn đủ thông minh để b
 <center><b> Ảnh 21. </b> Quả cà chua khổng lồ! <i> [7] </i></center>
 ## 4.5. Ngữ nghĩa cao
 
+Có những ảnh mang ý nghĩa trực tiếp mà bạn có thể hiểu ngay được, nhưng cũng có những ảnh mang hàm ý rất sâu xa, đòi hỏi cao về kiến thức của người đọc nó.
+
 <center><img src="https://i.redd.it/ejun3n7qxrc11.png" width=300></center>
 <center><b> Ảnh 22. </b> Ảnh meme<i> [7] </i></center>
-Khoảng cách giữa ảnh meme và ý nghĩa thật sự ẩn chứa trong nó là .. một dải ngân hà. Hiện nay đã có một bài báo [8] của các nghiên cứu sinh Stanford sử dụng Deep Neural Networks để tạo ra cả meme, công nghệ giờ thật là "chanh xả"! 
+Khoảng cách giữa ảnh meme và ý nghĩa thật sự ẩn chứa trong nó là .. một dải ngân hà. Ảnh meme có thể biễu diễn một vài sự vật hiện tượng, nhưng chủ thể chính mà nó muốn nhắc đến hoàn tòan khác trong hình. Hiện nay đã có một bài báo [8] của các nghiên cứu sinh Stanford sử dụng Deep Neural Networks để tạo ra cả meme, công nghệ giờ thật là "chanh xả"! 
 
 <center><img src="http://www.extracatchy.net/wp-content/uploads/2017/04/meaningful-pictures.jpg" width=400></center>
 <center><b> Ảnh 23. </b> Ảnh châm biếm - <i> extracatchy </i></center>
