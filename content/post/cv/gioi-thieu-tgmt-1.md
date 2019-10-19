@@ -97,7 +97,7 @@ Ok, giả sử bạn có một cái photometer (thước đo ánh sáng) và b�
 
 <center><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Grey_square_optical_illusion_proof2.svg/2000px-Grey_square_optical_illusion_proof2.svg.png' width=400></center>
 <center><b> Ảnh 6. </b> Hiệu ứng đổ bóng bàn cờ với photometer</center>
-Voila! Photometer sẽ cho bạn thấy rằng A và B đều có số photon như nhau. Như vậy là A và B có màu hoàn toàn giống nhau sao? 
+Voila! Photometer sẽ cho bạn thấy rằng A và B đều có độ sáng như nhau. Như vậy là A và B có màu hoàn toàn giống nhau sao? 
 
 Đúng vậy, bức hình này tạo ra một ảo ảnh thị giác rằng ô vuông A có vẻ như có màu đậm hơn ô vuông B... hoặc là do não của bạn nghĩ rằng đó là một ô sáng nhưng chả qua nó chỉ được đổ bóng thôi? Nhưng chắc chắn 1 điều rằng, đối với máy tính, vùng A và B có màu giống nhau (Vì chúng có cùng intensity mà!)
 
@@ -118,7 +118,7 @@ Voila! Photometer sẽ cho bạn thấy rằng A và B đều có số photon nh
 
 Nếu bạn để ý kĩ, hình ảnh 2 chiếc hộp đều nằm ở vị trí giống nhau, chỉ cái bóng là thay đổi. Não chúng ta, với kinh nghiệm hiểu biết về ánh sáng và đổ bóng dày dặn từ cha sinh mẹ đẻ tới giờ, não ta đang giả định rằng có một nguồn sáng phía trên chiếc hộp, và ở hình đầu tiên chiếc hộp được nhấc bổng lên, còn hình bên dưới đi đi với góc phải của mặt phẳng. 
 
-Một lần nữa,  **Nhìn thấy** không chỉ đơn thuần là **một thông số có thể đo lường được** . **Nhìn** là để hiểu.
+Một lần nữa,  **Nhìn thấy** không chỉ đơn thuần là **một thông số có thể đo lường được** . **Nhìn** là để **hiểu**.
 
 ## 2.3. Kính lập thể
 
