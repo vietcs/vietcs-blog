@@ -5,7 +5,7 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 130  # Order that this section will appear.
 
-title = "Đặt câu hỏi cho chúng tôi"
+title = "Đừng ngại hỏi!"
 subtitle = ""
 
 # Automatically link email and phone?
