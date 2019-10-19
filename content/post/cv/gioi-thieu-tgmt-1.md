@@ -1,5 +1,5 @@
 ---
-title: "Giới thiệu về Thị giác Máy tính (Phần 1)"
+title: "Giới thiệu về Computer Vision (Phần 1)"
 date: 2019-10-13T13:34:08+07:00
 draft: false
 authors: ["phatnt"]
@@ -9,10 +9,10 @@ tags:
   - introductory
   - vision
   - classical
-slug: gioi-thieu-tgmt-1
+slug: gioi-thieu-CV-1
 ---
 
-Có thể nói rằng, chúng ta thật may mắn khi được sinh ra trong một khoảng thời gian thế giới có thật nhiều sự đổi mới, công nghệ bắt đầu phát triển nhanh hơn bao giờ hết. Những công nghệ trước giờ chỉ có trên những thước phim Hollywood, giờ đây lại càng trở nên gần gũi với đời sống, trở thành một "cánh tay nối dài" của con người. Điển hình nhất là các ứng dụng Trí tuệ Nhân tạo mà làm mưa làm gió như hiện tại: Xe tự hành, robotics, nhà thông minh,.. Mà trong đó, **Thị giác Máy tính** (Computer Vision) là một lĩnh vực đóng vai trò rất quan trọng trong gần hết toàn bộ các mặt trận của Trí tuệ Nhân tạo, với mong muốn làm máy tính có khả năng **nhìn** được như con người. Nghe thật vi diệu phải không? Vậy thì chúng ta sẽ đi tìm hiểu xem chúng là gì nhé!
+Có thể nói rằng, chúng ta thật may mắn khi được sinh ra trong một khoảng thời gian thế giới có thật nhiều sự đổi mới, công nghệ bắt đầu phát triển nhanh hơn bao giờ hết. Những công nghệ trước giờ chỉ có trên những thước phim Hollywood, giờ đây lại càng trở nên gần gũi với đời sống, trở thành một "cánh tay nối dài" của con người. Điển hình nhất là các ứng dụng Trí tuệ Nhân tạo mà làm mưa làm gió như hiện tại: Xe tự hành, robotics, nhà thông minh,.. Mà trong đó, **Computer Vision** (Thị giác Máy tính) là một lĩnh vực đóng vai trò rất quan trọng trong gần hết toàn bộ các mặt trận của Trí tuệ Nhân tạo, với mong muốn làm máy tính có khả năng **nhìn** được như con người. Nghe thật vi diệu phải không? Vậy thì chúng ta sẽ đi tìm hiểu xem chúng là gì nhé!
 
 {{% toc %}}
 
@@ -20,16 +20,16 @@ Có thể nói rằng, chúng ta thật may mắn khi được sinh ra trong m�
 
 <center><img src="https://miro.medium.com/max/1200/1*s9raSe9mLeSSuxE3API-ZA.gif" width=400></center>
 <center> <b>Ảnh 1</b> Minh họa Object Detection - <i>towardsdatascience </i></center>
-Như vậy, theo bạn, **Thị giác Máy tính** (TGMT) là gì?  
+Như vậy, theo bạn, **Computer Vision** (CV)  là gì?  
 
-Đây có vẻ như là một khái niệm mà người không biết thì nghĩ mình biết rất rõ, còn người nghĩ mình không biết thì lại biết rất rõ 🤣. Mình có đi thử hỏi một số bạn thì xem các bạn đó nghĩ TGMT là thứ gì trên đời? Mình sẽ gom các câu trả lời thành một số dạng sau đây:
+Đây có vẻ như là một khái niệm mà người không biết thì nghĩ mình biết rất rõ, còn người nghĩ mình không biết thì lại biết rất rõ 🤣. Mình có đi thử hỏi một số bạn thì xem các bạn đó nghĩ CV là thứ gì trên đời? Mình sẽ gom các câu trả lời thành một số dạng sau đây:
 
-- "TGMT là Xử lý ảnh (Image Processing)"
+- "CV là Image Processing (Xử lý ảnh)"
 
-- "TGMT là nhận dạng vật thể (Object Detection)"
-- "TGMT  là dạy cho máy tính hiểu các thông tin thị giác (như ảnh và video) như con người"
-- "TGMT là các hệ thống camera sử dụng trí thông minh của máy để giải quyết các công việc của người"
-- "TGMT là liên quan tới việc tìm kiếm các quy luật để khai thác thông tin thị giác từ ảnh và video"
+- "CV là nhận dạng Object Detection (Nhận dạng vật thể)"
+- "CV là dạy cho máy tính hiểu các thông tin thị giác (như ảnh và video) như con người"
+- "CV là các hệ thống camera sử dụng trí thông minh của máy để giải quyết các công việc của người"
+- "CV là liên quan tới việc tìm kiếm các quy luật để khai thác thông tin thị giác từ ảnh và video"
 
 Hmm có vẻ như ai cũng có lý cả đúng không? Theo bạn, theo bạn ai đúng ai sai?
 
@@ -58,7 +58,7 @@ Nhưng "story" ở đây là gì? Tùy thuộc vào việc bạn muốn làm gì
 - Hàm ý của bức ảnh
 - ..
 
-Qua đó, **TGMT** là một lĩnh vực nghiên cứu để khiến máy tính hiểu được các thông tin thị giác tương tự như con người. 
+Qua đó, **CV** là một lĩnh vực nghiên cứu để khiến máy tính hiểu được các thông tin thị giác tương tự như con người. 
 
 `The goal of computer vision is to write computer programs that can interpret images ` [3]
 
@@ -70,16 +70,16 @@ Bây giờ chúng ta sẽ coi thêm một định nghĩa tổng quát và "xịn
 
 `Computer vision is an interdisciplinary scientific field that deals with how computers can be made to gain high-level understanding from digital images or videos. From the perspective of engineering, it seeks to automate tasks that the human visual system can do` [1]
 
-Như vậy là **TGMT** sẽ quan tâm tới việc làm thế nào để khiến máy tính có thể **hiểu** được các thông tin thị giác như ảnh và videos. Nhiệm vụ chính của **TGMT** là làm cầu nối (bridging) cho khoảng cách từ giữa trí thông minh thị giác của con người với trí thông minh thị giác của máy tính. Ở khía cạnh kĩ thuật thì **mục tiêu** của **TGMT** là **tự động hóa** các tác vụ liên quan tới thị giác giống như con người: Detection (nhận dạng), Image Captioning (Nhìn hình mô tả), Visual question answering (Hỏi đáp thị giác),..
+Như vậy là **CV** sẽ quan tâm tới việc làm thế nào để khiến máy tính có thể **hiểu** được các thông tin thị giác như ảnh và videos. Nhiệm vụ chính của **CV** là làm cầu nối (bridging) cho khoảng cách từ giữa trí thông minh thị giác của con người với trí thông minh thị giác của máy tính. Ở khía cạnh kĩ thuật thì **mục tiêu** của **CV** là **tự động hóa** các tác vụ liên quan tới thị giác giống như con người: Detection (nhận dạng), Image Captioning (Nhìn hình mô tả), Visual question answering (Hỏi đáp thị giác),..
 
-# 2. TGMT không phải là xử lý ảnh
+# 2. Computer Vision không phải là Image Processing
 
-Khác với Xử lý ảnh: 
+Khác với Image Processing (xử lý ảnh): 
 
 - **Đẩu vào**: Ảnh 
 - **Đầu ra**: Ảnh
 
-Với đầu vào là ảnh, TGMT hướng tới đầu ra là .. "**hiểu**" bức ảnh. Việc **hiểu** này có vẻ rất đơn giản đối với chúng ta, bởi lẽ, khi bạn sinh ra, ban đầu bạn sẽ thấy mờ mờ một chút, rồi đột nhiên, bạn thấy và hiểu mọi thứ tự nhiên đến lạ! Trong các ví dụ tiếp theo, chúng ta cùng tìm hiểu xem việc **hiểu** là như thế nào nhé.
+Với đầu vào là ảnh, CV hướng tới đầu ra là .. "**hiểu**" bức ảnh. Việc **hiểu** này có vẻ rất đơn giản đối với chúng ta, bởi lẽ, khi bạn sinh ra, ban đầu bạn sẽ thấy mờ mờ một chút, rồi đột nhiên, bạn thấy và hiểu mọi thứ tự nhiên đến lạ! Trong các ví dụ tiếp theo, chúng ta cùng tìm hiểu xem việc **hiểu** là như thế nào nhé.
 
 ## 2.1. Hiệu ứng Đổ bóng bàn cờ Adelson
 
@@ -136,7 +136,7 @@ Một lần nữa,  **Nhìn thấy** không chỉ đơn thuần là **một thô
 
 Nhưng thật ra, có một sự mơ hồ về việc chiếc hộp đang di chuyển theo hướng nào, và não của bạn đã viết nên một câu chuyện để giải thích hiện tượng đó. Cuối cùng, sự khác nhau giữa Xử lý ảnh và Thị giác Máy tính là **xây dựng câu chuyện** đó.
 
-# 3. Tại sao TGMT?
+# 3. Tại sao học Computer Vision?
 
 Vậy các bạn đã biết computer vision là gì, tại sao chúng ta phải học computer vision?
 
@@ -162,25 +162,25 @@ Thực tế, các mạng xã hội và các công cụ tìm kiếm hiện nay đ
 
 "Nếu chúng ta dạy máy tính biết cách suy nghĩ, trước hết chúng ta phải dạy chúng cách nhìn" - Fei-fei Li 
 
-Thật vậy, hiện này, hầu hết các ứng dụng trong Trí tuệ Nhân tạo đều dựa trên phần lớn các thành tựu của **TGMT**. Ví dụ điển hình nhất là xe tự hành (self-dring car)
+Thật vậy, hiện này, hầu hết các ứng dụng trong Trí tuệ Nhân tạo đều dựa trên phần lớn các thành tựu của **CV**. Ví dụ điển hình nhất là xe tự hành (self-dring car)
 
 <center><img src='https://d3i6fh83elv35t.cloudfront.net/static/2018/10/AdobeStock_1469331961-1200x800.jpeg' width=400></center>
 <center><b> Ảnh 13. </b> Xe tự hành - pbs.org</center>
-Ngoài các thành tựu về kĩ thuật, TGMT cũng gần như là một "diễn viên chính" trong cuốn phim Xe tự hành. Trước khi ra quyết định thông minh (như rẽ hướng nào, chạy hay dừng lại), thì xe phải "nhìn thông minh" trước đã!  
+Ngoài các thành tựu về kĩ thuật, CV cũng gần như là một "diễn viên chính" trong cuốn phim Xe tự hành. Trước khi ra quyết định thông minh (như rẽ hướng nào, chạy hay dừng lại), thì xe phải "nhìn thông minh" trước đã!  
 
 <center><img src='https://cdn.vox-cdn.com/thumbor/ggSkZPfsAM8ITnEbvendtwajXDo=/0x0:2040x1360/1200x800/filters:focal(901x509:1227x835)/cdn.vox-cdn.com/uploads/chorus_image/image/61868725/nstatt_181019_3042_8781.0.jpg' width=400></center>
 <center><b> Ảnh 14. </b> Amazon Go, Siêu thị không người bán của Amazon - The Verge</center>
 ## 3.3. Để cứu người 
 
-[11] Vào năm 2017, các nghiên cứu sinh ở Stanford đã làm nghiên cứu thành công một thiết bị sử dụng TGMT để chẩn đoán những dấu hiệu bất thường trên da, để phát hiện ra dấu hiệu của ung thư da giai đoạn đầu.
+[11] Vào năm 2017, các nghiên cứu sinh ở Stanford đã làm nghiên cứu thành công một thiết bị sử dụng CV để chẩn đoán những dấu hiệu bất thường trên da, để phát hiện ra dấu hiệu của ung thư da giai đoạn đầu.
 
 <center><img src="https://news-media.stanford.edu/wp-content/uploads/2017/01/20153422/IMG_6861.jpg" width=400></center>
 <center><b> Ảnh 15. </b> Dermatoscope - Thiết bị chẩn đoán bệnh da liễu cầm tay của các nghiên cứu sinh Stanford  [4]</center>
-Đây không phải là lần đầu tiên TGMT xuất hiện trong lĩnh vực y tế, và chắc chắn cũng không phải là lần cuối. Ngoài ra các TGMT còn được dùng để hỗ trợ chẩn đoán trên ảnh siêu âm (ultrasound), ảnh MRI và cả ảnh CT nữa!
+Đây không phải là lần đầu tiên CV xuất hiện trong lĩnh vực y tế, và chắc chắn cũng không phải là lần cuối. Ngoài ra các CV còn được dùng để hỗ trợ chẩn đoán trên ảnh siêu âm (ultrasound), ảnh MRI và cả ảnh CT nữa!
 
 <center><img src='https://abm-website-assets.s3.amazonaws.com/rdmag.com/s3fs-public/embedded_image/2017/04/lung%20cancer.jpg' width=400></center>
 <center><b> Ảnh 16. </b> Chẩn đoán ung thư phổi trên ảnh X-quang [4]</center>
-Qua phần 1, bạn đã hiểu được cơ bản Computer Vision là gì. Mời bạn xem tiếp <a href='../gioi-thieu-tgmt-2'> phần 2 </a> để tìm hiểu thêm về Computer Vision nhé!
+Qua phần 1, bạn đã hiểu được cơ bản Computer Vision là gì. Mời bạn xem tiếp <a href='../gioi-thieu-CV-2'> phần 2 </a> để tìm hiểu thêm về Computer Vision nhé!
 
 # Tham khảo
 

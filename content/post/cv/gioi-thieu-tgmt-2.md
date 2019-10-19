@@ -1,5 +1,5 @@
 ---
-title: "Giới thiệu về Thị giác Máy tính (Phần 2)"
+title: "Giới thiệu về Computer Vision(Phần 2)"
 date: 2019-10-18T13:34:08+07:00
 draft: false
 authors: ["phatnt"]
@@ -9,17 +9,17 @@ tags:
   - introductory
   - vision
   - classical
-slug: gioi-thieu-tgmt-2
+slug: gioi-thieu-CV-2
 toc: true
 ---
 
-Qua bài trước, bạn đã tìm hiểu được TGMT là gì. Ở bài này, chúng ta sẽ tìm hiểu thêm một số khía cạnh khác của TGMT nhé.
+Qua bài trước, bạn đã tìm hiểu được CV là gì. Ở bài này, chúng ta sẽ tìm hiểu thêm một số khía cạnh khác của CV nhé.
 
 {{% toc %}}
 
-# 4. TGMT không dễ
+# 4. Computer Vision không dễ
 
-TGMT là một lĩnh vực thú vị, tuy nhiên còn tồn tại nhiều thách thức, từ những thách thức đơn giản tới những thách thức rất tinh tế! 
+CV là một lĩnh vực thú vị, tuy nhiên còn tồn tại nhiều thách thức, từ những thách thức đơn giản tới những thách thức rất tinh tế! 
 
 ## 4.1. Mơ hồ về nội dung
 
@@ -61,14 +61,14 @@ Ngoài ra, ta còn có ảnh châm biếm, mỗi tấm mang hàm ý sâu xa khô
 
 # 5. Một số chủ đề tiêu biểu trong Computer Vision
 
-Nhắc đến TGMT là không thể không nhắc đến hội nghị CVPR. [12] CVPR là một trong 3 hội nghĩ top đầu của TGMT trên thế giới. Vào năm 2019, có tổng số 1300 bài báo được thông qua trong số 5165 bài báo được nộp vào hội nghĩ.
+Nhắc đến CV là không thể không nhắc đến hội nghị CVPR. [12] CVPR là một trong 3 hội nghĩ top đầu của CV trên thế giới. Vào năm 2019, có tổng số 1300 bài báo được thông qua trong số 5165 bài báo được nộp vào hội nghĩ.
 
 <center> <img src='https://scontent.fsgn5-6.fna.fbcdn.net/v/t1.15752-9/73342373_503354376909863_3683605295851896832_n.png?_nc_cat=106&_nc_oc=AQlUf-81SexZZCyTHg8z9UwTmzWVrScviSg9iqx2DaZI4LXz_7nJELPGgqRxU99BxEA&_nc_ht=scontent.fsgn5-6.fna&oh=22623ff8c008194d73e4f60fa3646cb9&oe=5E18DE0D' width=500></center>
 <center><b> Ảnh 24. </b> Các hướng nghiên cứu CVPR 2019 <i> [12] </i></center>
 Không ngạc nhiên khi gần như toàn bộ các nghiên cứu đều hướng về Deep Learning. Trong đó một số bài toán nổi bật gồm có:
 
 - Học sâu (Deep learning)
-- Nhận dạng: phát hiện, phân loại, truy vấn
+- Nhận dạng: phát hiện, phân loại, truy vấn (Detection, Categorization, Retrieval)
 - Nhận dạng mặt, cử chỉ và dáng người (Face, Gesture, and Pose)
 - Thị giác cấp thấp (Low-level vision)
 - Phát sinh, tổng hợp hình ảnh và video (Image and Video Synthesis)
@@ -78,7 +78,7 @@ Không ngạc nhiên khi gần như toàn bộ các nghiên cứu đều hướn
 
 ## 5.1. Object Detection
 
-Object Detection là một bài toán kinh điển của TGMT. Với đầu vào là một bức ảnh và đầu ra là các "hộp" bo xung quanh các đối tượng và cho biết đối tượng đó là gì. 
+Object Detection là một bài toán kinh điển của CV. Với đầu vào là một bức ảnh và đầu ra là các "hộp" bo xung quanh các đối tượng và cho biết đối tượng đó là gì. 
 
 <center><img src='https://miro.medium.com/max/768/1*VXZ8CamGG2Z0M0N4t0Fmng.jpeg' width=400></center>
 <center><b> Ảnh 25. </b> Phát hiện và nhận dạng vật thể (Object Detection) -  <i> towardsdatascience</i></center>
@@ -101,22 +101,22 @@ Ngôn ngữ con người không chỉ xoay quanh những lời nói, mà còn ba
 <center><img src='https://divamgupta.com/assets/images/posts/imgseg/teaser.png' width=400></center>
 ## 5.5. Vision & Language
 
-Một trong những hướng nghiên cứu cũng rất thú vị là **Image Captioning**. Từ một hình ảnh, phát sinh ra một câu mô tả tương ứng với hình ảnh đó. Cái khó là làm sao cho câu được phát sinh ra tự nhiên hết sức có thể. Đây là hướng nghiên cứu mà có cả sự kết hợp của **TGMT** và **Mô hình hóa ngôn ngữ** (Language Modelling)
+Một trong những hướng nghiên cứu cũng rất thú vị là **Image Captioning**. Từ một hình ảnh, phát sinh ra một câu mô tả tương ứng với hình ảnh đó. Cái khó là làm sao cho câu được phát sinh ra tự nhiên hết sức có thể. Đây là hướng nghiên cứu mà có cả sự kết hợp của **CV** và **Mô hình hóa ngôn ngữ** (Language Modelling)
 
 <center><b> Ảnh 28. </b> Phân đoạn hình ảnh  <i> - divamgupta </i></center>
 <center><img src='https://miro.medium.com/max/4435/1*6BFOIdSHlk24Z3DFEakvnQ.png' width=400></center>
 <center><b> Ảnh 29. </b> Phát sinh câu mô tả thông qua hình ảnh  <i> - towardsdatascience </i></center>
 # 6. Tổng kết
 
-Như vậy, thông qua bài giới thiệu về TGMT trên, bạn đã một phần nào hiểu được TGMT là gì: 
+Như vậy, thông qua bài giới thiệu về CV trên, bạn đã một phần nào hiểu được CV là gì: 
 
-- TGMT là một nhánh nghiên cứu trong Khoa học Máy tính để làm máy tính **hiểu** được các thông tin thi giác như con người
-- TGMT không đơn thuần là xử lý ảnh, mà là **hiểu** bức ảnh
-- TGMT đã, đang và sẽ hỗ trợ con người trong rất nhiều khía cạnh, góp phần nâng cao chất lượng và đưa con người tới tương lai 
-- Các bài toán trong TGMT cũng có rất nhiều thách thức
-- TGMT có rất nhiều hướng khác nhau để các bạn có thể tham gia nghiên cứu, và có vẻ như hướng nào cũng thú vị 😁
+- CV là một nhánh nghiên cứu trong Khoa học Máy tính để làm máy tính **hiểu** được các thông tin thi giác như con người
+- CV không đơn thuần là xử lý ảnh, mà là **hiểu** bức ảnh
+- CV đã, đang và sẽ hỗ trợ con người trong rất nhiều khía cạnh, góp phần nâng cao chất lượng và đưa con người tới tương lai 
+- Các bài toán trong CV cũng có rất nhiều thách thức
+- CV có rất nhiều hướng khác nhau để các bạn có thể tham gia nghiên cứu, và có vẻ như hướng nào cũng thú vị 😁
 
-Qua bài viết này, mình hi vọng một có thể giúp các bạn có nhiều cảm hứng hơn để học TGMT và bạn có thể tự hào rằng Việt Nam có một cộng đồng TGMT Việt Nam lớn và luôn sẵn sàng hỗ trợ bạn! 😁
+Qua bài viết này, mình hi vọng một có thể giúp các bạn có nhiều cảm hứng hơn để học CV và bạn có thể tự hào rằng Việt Nam có một cộng đồng CV Việt Nam lớn và luôn sẵn sàng hỗ trợ bạn! 😁
 
 # Tham khảo
 
