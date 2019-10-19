@@ -19,7 +19,7 @@ Qua bài trước, bạn đã tìm hiểu được TGMT là gì. Ở bài này, 
 
 # 4. Computer Vision không dễ
 
-# Computer  
+Computer Vision là một lĩnh vực thú vị, tuy nhiên còn tồn tại nhiều thách thức, từ những thách thức đơn giản tới những thách thức rất tinh tế! 
 
 ## 4.1. Mơ hồ về nội dung
 
