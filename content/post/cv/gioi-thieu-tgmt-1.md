@@ -38,7 +38,6 @@ Hmm có vẻ như ai cũng có lý cả đúng không? Theo bạn, theo bạn ai
 
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Accident_de_chemin_de_fer_%C3%A1_la_gare_Montparnasse_en_1895.jpg" width=300></center>
 <center> <b>Ảnh 2.</b> L'Accident de la Gare Montparnasse</center>
-
 Nhìn bức ảnh bạn thấy gì:
 
 - Một tai nạn xe lửa thảm khốc ?
@@ -67,7 +66,7 @@ Qua đó, **TGMT** là một lĩnh vực nghiên cứu để khiến máy tính 
 
 <center><img src="https://i0.wp.com/static1.businessinsider.com/image/535edec0ecad04c0741f732f/construction_google_car.gif" width=400> </center>
 <center> <b>Ảnh 4.</b> Thị giác trong xe tự hành - <i>informationstrategyrsm</i> </center>
-Bây giờ chúng ta sẽ nhìn lại định nghĩa để nhìn nhận lại định một cách chuẩn mực hơn, ở đây có rất nhiều định nghĩa nhưng mình sẽ cố tìm những định nghĩa đáng tin cậy và có tính tổng quát cao . Theo định nghĩa của Dana H. Ballard và Christopher M. Brown trong cuốn sách "Computer Vision" xuất bản năm 1982:
+Bây giờ chúng ta sẽ coi thêm một định nghĩa tổng quát và "xịn xò" hơn nhé. Theo định nghĩa của Dana H. Ballard và Christopher M. Brown trong cuốn sách "Computer Vision" xuất bản năm 1982:
 
 `Computer vision is an interdisciplinary scientific field that deals with how computers can be made to gain high-level understanding from digital images or videos. From the perspective of engineering, it seeks to automate tasks that the human visual system can do` [1]
 
@@ -171,7 +170,6 @@ Ngoài các thành tựu về kĩ thuật, TGMT cũng gần như là một "di�
 
 <center><img src='https://cdn.vox-cdn.com/thumbor/ggSkZPfsAM8ITnEbvendtwajXDo=/0x0:2040x1360/1200x800/filters:focal(901x509:1227x835)/cdn.vox-cdn.com/uploads/chorus_image/image/61868725/nstatt_181019_3042_8781.0.jpg' width=400></center>
 <center><b> Ảnh 14. </b> Amazon Go, Siêu thị không người bán của Amazon - The Verge</center>
-
 ## 3.3. Để cứu người 
 
 [11] Vào năm 2017, các nghiên cứu sinh ở Stanford đã làm nghiên cứu thành công một thiết bị sử dụng TGMT để chẩn đoán những dấu hiệu bất thường trên da, để phát hiện ra dấu hiệu của ung thư da giai đoạn đầu.
