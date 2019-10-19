@@ -162,14 +162,20 @@ Thực tế, các mạng xã hội và các công cụ tìm kiếm hiện nay đ
 
 "Nếu chúng ta dạy máy tính biết cách suy nghĩ, trước hết chúng ta phải dạy chúng cách nhìn" - Fei-fei Li 
 
-Thật vậy, hiện này, hầu hết các ứng dụng trong Trí tuệ Nhân tạo đều dựa trên phần lớn các thành tựu của **CV**. Ví dụ điển hình nhất là xe tự hành (self-dring car)
-
-<center><img src='https://d3i6fh83elv35t.cloudfront.net/static/2018/10/AdobeStock_1469331961-1200x800.jpeg' width=400></center>
-<center><b> Ảnh 13. </b> Xe tự hành - pbs.org</center>
-Ngoài các thành tựu về kĩ thuật, CV cũng gần như là một "diễn viên chính" trong cuốn phim Xe tự hành. Trước khi ra quyết định thông minh (như rẽ hướng nào, chạy hay dừng lại), thì xe phải "nhìn thông minh" trước đã!  
+Thật vậy, hiện nay, hầu hết các ứng dụng trong Trí tuệ Nhân tạo đều dựa trên phần lớn các thành tựu của **CV**. Ví dụ điển hình nhất là cửa hàng Amazon Go, đây là một cửa hàng được lắp đặt các hệ thống camera thông minh để giám sát người mua hàng check-in ra vào.
 
 <center><img src='https://cdn.vox-cdn.com/thumbor/ggSkZPfsAM8ITnEbvendtwajXDo=/0x0:2040x1360/1200x800/filters:focal(901x509:1227x835)/cdn.vox-cdn.com/uploads/chorus_image/image/61868725/nstatt_181019_3042_8781.0.jpg' width=400></center>
-<center><b> Ảnh 14. </b> Amazon Go, Siêu thị không người bán của Amazon - The Verge</center>
+<center><b> Ảnh 13. </b> Amazon Go, Siêu thị không người bán của Amazon - The Verge</center>
+
+Như vậy, trước khi ra bất kì quyết định gì về người mua hàng, hệ thống phải **nhìn** thông minh trước đã.
+
+<center><img src='https://d3i6fh83elv35t.cloudfront.net/static/2018/10/AdobeStock_1469331961-1200x800.jpeg' width=400></center>
+<center><b> Ảnh 14. </b> Xe tự hành - pbs.org</center>
+
+Ngoài các cảm biến, GPS, xe tự hành còn sử dụng Computer Vision để hỗ trợ điều hướng.
+
+
+
 ## 3.3. Để cứu người 
 
 [11] Vào năm 2017, các nghiên cứu sinh ở Stanford đã làm nghiên cứu thành công một thiết bị sử dụng CV để chẩn đoán những dấu hiệu bất thường trên da, để phát hiện ra dấu hiệu của ung thư da giai đoạn đầu.
