@@ -188,7 +188,7 @@ Qua phần 1, bạn đã hiểu được cơ bản Computer Vision là gì. Mờ
 
 [2] [Computer Vision - Wikipedia](https://en.wikipedia.org/wiki/Computer_vision#cite_note-Ballard-Brown-1982-1)
 
-[3] [Introduction to Computer Vision - Georgia Tech on Udacity]([https://www.udacity.com/course/introduction-to-computer-vision--ud810](https://www.udacity.com/course/introduction-to-computer-vision--ud810?fbclid=IwAR03v3_-5CH4ozgbTnJHtU53kd_8tUeFk3aqlJm_vodMzYA-Q6UOVUMA958))
+[3] [Introduction to Computer Vision - Georgia Tech on Udacity](https://www.udacity.com/course/introduction-to-computer-vision--ud810)
 
 [4] [CS4670 Cornell's Introduction to Computer Vision](http://www.cs.cornell.edu/courses/cs4670/2018sp/lec01_intro.pdf)
 
