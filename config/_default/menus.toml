@@ -9,22 +9,29 @@
   weight = 10
 
 [[main]]
-  name = "Posts"
-  url = "#posts"
+  name = "CV cổ điển"
+  url = "#post-cv"
   weight = 20
 
 [[main]]
-  name = "Projects"
-  url = "#projects"
+  name = "CV hiện đại"
+  url = "#post-mcv"
   weight = 30
 
 [[main]]
-  name = "Publications"
-  url = "#featured"
+  name = "Ứng dụng"
+  url = "#post-tech"
   weight = 40
 
 [[main]]
-  name = "Contact"
+  name = "Toán cho CS"
+  url = "#post-math"
+  weight = 50
+
+
+
+[[main]]
+  name = "Liên hệ"
   url = "#contact"
   weight = 60
 
