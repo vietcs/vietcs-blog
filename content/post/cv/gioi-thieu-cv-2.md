@@ -99,13 +99,17 @@ Ngôn ngữ con người không chỉ xoay quanh những lời nói, mà còn ba
 [15] Ở trên mình có giới thiệu về Object Detection, tuy nhiên thực tế bounding box không biểu thị được **đúng hình dạng** của vật thể mà mình quan tâm. Trong bài toán segmentation, với đầu vào là bức ảnh, đầu ra cho biết các **đường bao** các vị trí mà đối tượng đó xuất hiện trên ảnh đó theo đúng hình dạng của đối tượng. 
 
 <center><img src='https://divamgupta.com/assets/images/posts/imgseg/teaser.png' width=400></center>
+<center><b> Ảnh 28. </b> Phân đoạn hình ảnh  <i> - divamgupta </i></center>
+<center>
+
 ## 5.5. Vision & Language
 
 Một trong những hướng nghiên cứu cũng rất thú vị là **Image Captioning**. Từ một hình ảnh, phát sinh ra một câu mô tả tương ứng với hình ảnh đó. Cái khó là làm sao cho câu được phát sinh ra tự nhiên hết sức có thể. Đây là hướng nghiên cứu mà có cả sự kết hợp của **CV** và **Mô hình hóa ngôn ngữ** (Language Modelling)
 
-<center><b> Ảnh 28. </b> Phân đoạn hình ảnh  <i> - divamgupta </i></center>
-<center><img src='https://miro.medium.com/max/4435/1*6BFOIdSHlk24Z3DFEakvnQ.png' width=400></center>
+<img src='https://miro.medium.com/max/4435/1*6BFOIdSHlk24Z3DFEakvnQ.png' width=400></center>
+
 <center><b> Ảnh 29. </b> Phát sinh câu mô tả thông qua hình ảnh  <i> - towardsdatascience </i></center>
+
 # 6. Tổng kết
 
 Như vậy, thông qua bài giới thiệu về CV trên, bạn đã một phần nào hiểu được CV là gì: 

@@ -12,7 +12,7 @@ tags:
 slug: gioi-thieu-CV-1
 ---
 
-Có thể nói rằng, chúng ta thật may mắn khi được sinh ra trong một khoảng thời gian thế giới có thật nhiều sự đổi mới, công nghệ bắt đầu phát triển nhanh hơn bao giờ hết. Những công nghệ trước giờ chỉ có trên những thước phim Hollywood, giờ đây lại càng trở nên gần gũi với đời sống, trở thành một "cánh tay nối dài" của con người. Điển hình nhất là các ứng dụng Trí tuệ Nhân tạo mà làm mưa làm gió như hiện tại: Xe tự hành, robotics, nhà thông minh,.. Mà trong đó, **Computer Vision** (Thị giác Máy tính) là một lĩnh vực đóng vai trò rất quan trọng trong gần hết toàn bộ các mặt trận của Trí tuệ Nhân tạo, với mong muốn làm máy tính có khả năng **nhìn** được như con người. Nghe thật vi diệu phải không? Vậy thì chúng ta sẽ đi tìm hiểu xem chúng là gì nhé!
+Có thể nói rằng, chúng ta thật may mắn khi được sinh ra trong một khoảng thời gian thế giới có thật nhiều sự đổi mới, công nghệ bắt đầu phát triển nhanh hơn bao giờ hết. Những công nghệ trước giờ chỉ có trên những thước phim Hollywood, giờ đây lại càng trở nên gần gũi với đời sống, trở thành một "cánh tay nối dài" của con người. Điển hình nhất là các ứng dụng Trí tuệ Nhân tạo mà làm mưa làm gió như hiện tại: Xe tự hành, robotics, nhà thông minh,.. Mà trong đó, **Computer Vision** (Thị giác Máy tính) là một lĩnh vực đóng vai trò rất quan trọng  các mặt trận của Trí tuệ Nhân tạo, với mong muốn làm máy tính có khả năng **nhìn** được như con người. Nghe thật vi diệu phải không? Vậy thì chúng ta sẽ đi tìm hiểu xem chúng là gì nhé!
 
 {{% toc %}}
 
@@ -166,12 +166,10 @@ Thật vậy, hiện nay, hầu hết các ứng dụng trong Trí tuệ Nhân t
 
 <center><img src='https://cdn.vox-cdn.com/thumbor/ggSkZPfsAM8ITnEbvendtwajXDo=/0x0:2040x1360/1200x800/filters:focal(901x509:1227x835)/cdn.vox-cdn.com/uploads/chorus_image/image/61868725/nstatt_181019_3042_8781.0.jpg' width=400></center>
 <center><b> Ảnh 13. </b> Amazon Go, Siêu thị không người bán của Amazon - The Verge</center>
-
 Như vậy, trước khi ra bất kì quyết định gì về người mua hàng, hệ thống phải **nhìn** thông minh trước đã.
 
 <center><img src='https://d3i6fh83elv35t.cloudfront.net/static/2018/10/AdobeStock_1469331961-1200x800.jpeg' width=400></center>
 <center><b> Ảnh 14. </b> Xe tự hành - pbs.org</center>
-
 Ngoài các cảm biến, GPS, xe tự hành còn sử dụng Computer Vision để hỗ trợ điều hướng.
 
 
