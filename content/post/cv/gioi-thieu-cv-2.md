@@ -1,5 +1,5 @@
 ---
-title: "Giới thiệu về Computer Vision(Phần 2)"
+title: "Giới thiệu về Computer Vision (Phần 2)"
 date: 2019-10-18T13:34:08+07:00
 draft: false
 authors: ["phatnt"]
