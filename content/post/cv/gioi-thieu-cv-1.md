@@ -12,7 +12,7 @@ tags:
 slug: gioi-thieu-CV-1
 ---
 
-Có thể nói rằng, chúng ta thật may mắn khi được sinh ra trong một khoảng thời gian thế giới có thật nhiều sự đổi mới, công nghệ bắt đầu phát triển nhanh hơn bao giờ hết. Những công nghệ trước giờ chỉ có trên những thước phim Hollywood, giờ đây lại càng trở nên gần gũi với đời sống, trở thành một "cánh tay nối dài" của con người. Điển hình nhất là các ứng dụng Trí tuệ Nhân tạo mà làm mưa làm gió như hiện tại: Xe tự hành, robotics, nhà thông minh,.. Mà trong đó, **Computer Vision** (Thị giác Máy tính) là một lĩnh vực đóng vai trò rất quan trọng  các mặt trận của Trí tuệ Nhân tạo, với mong muốn làm máy tính có khả năng **nhìn** được như con người. Nghe thật vi diệu phải không? Vậy thì chúng ta sẽ đi tìm hiểu xem chúng là gì nhé!
+Có thể nói rằng, chúng ta thật may mắn khi được sinh ra trong một khoảng thời gian thế giới có thật nhiều sự đổi mới, công nghệ bắt đầu phát triển nhanh hơn bao giờ hết. Những công nghệ trước giờ chỉ có trên những thước phim Hollywood, giờ đây lại càng trở nên gần gũi với đời sống, trở thành một "cánh tay nối dài" của con người. Điển hình nhất là các ứng dụng Trí tuệ Nhân tạo mà làm mưa làm gió như hiện tại: Xe tự hành, robotics, nhà thông minh,.. Mà trong đó, **Computer Vision** (Thị giác Máy tính) là một lĩnh vực đóng không nhỏ trong đó, với mong muốn làm máy tính có khả năng **nhìn** được như con người. Nghe thật vi diệu phải không? Vậy thì chúng ta sẽ đi tìm hiểu xem chúng là gì nhé!
 
 {{% toc %}}
 
@@ -162,7 +162,7 @@ Thực tế, các mạng xã hội và các công cụ tìm kiếm hiện nay đ
 
 "Nếu chúng ta dạy máy tính biết cách suy nghĩ, trước hết chúng ta phải dạy chúng cách nhìn" - Fei-fei Li 
 
-Thật vậy, hiện nay, hầu hết các ứng dụng trong Trí tuệ Nhân tạo đều dựa trên phần lớn các thành tựu của **CV**. Ví dụ điển hình nhất là cửa hàng Amazon Go, đây là một cửa hàng được lắp đặt các hệ thống camera thông minh để giám sát người mua hàng check-in ra vào.
+Hiện nay, các ứng dụng trong Trí tuệ Nhân Tạo đều ít nhiều có sự góp mặt của **CV**. Ví dụ điển hình nhất là cửa hàng Amazon Go, đây là một cửa hàng được lắp đặt các hệ thống camera thông minh để giám sát người mua hàng check-in ra vào.
 
 <center><img src='https://cdn.vox-cdn.com/thumbor/ggSkZPfsAM8ITnEbvendtwajXDo=/0x0:2040x1360/1200x800/filters:focal(901x509:1227x835)/cdn.vox-cdn.com/uploads/chorus_image/image/61868725/nstatt_181019_3042_8781.0.jpg' width=400></center>
 <center><b> Ảnh 13. </b> Amazon Go, Siêu thị không người bán của Amazon - The Verge</center>
