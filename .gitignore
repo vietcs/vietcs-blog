@@ -1,4 +1,6 @@
-*
 */
+*
 !.gitignore
+!content/post/cv/*
 !content/*
+!content/post/*
