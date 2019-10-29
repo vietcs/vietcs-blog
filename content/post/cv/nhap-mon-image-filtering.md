@@ -22,7 +22,7 @@ Filter (hay tiếng Việt là bộ lọc) được dùng rất nhiều trong th
 ## 2.1. Bộ lọc tương quan (Correlation filter)
 Để áp dụng một bộ lọc vào ảnh, ta cần **kernel**. Kernel có thể được hiểu như lõi, là một ma trận mang tính chất đặc trưng quyết định đầu ra của ảnh thông qua thuật toán lọc ảnh. Ở bài tiếp theo, chúng ta sẽ bàn kỹ về tích chập ảnh với kernel và so sánh với tương quan chéo.
 
-Giả sử một cửa sổ con có kích thước \ k \times k \ , với  \( k \) là số lẻ, ta tính được **tương quan (correlation)** dựa trên công thức:
+Giả sử một cửa sổ con có kích thước $k \times k$ , với  $k$ là số lẻ, ta tính được **tương quan (correlation)** dựa trên công thức:
 $$
 I[i,j] = \frac{1}{k^2}\sum_{u=-\frac{k-1}{2}}^{\frac{k-1}{2}}\sum_{v=-\frac{k-1}{2}}^{\frac{k-1}{2}}I_0[i+u,j+v]
 \tag{1}
