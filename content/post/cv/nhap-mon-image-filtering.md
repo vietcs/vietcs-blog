@@ -22,9 +22,9 @@ Filter (hay tiếng Việt là bộ lọc) được dùng rất nhiều trong th
 ## 2.1. Bộ lọc tương quan (Correlation filter)
 Để áp dụng một bộ lọc vào ảnh, ta cần **kernel**. Kernel có thể được hiểu như lõi, là một ma trận mang tính chất đặc trưng quyết định đầu ra của ảnh thông qua thuật toán lọc ảnh. Ở bài tiếp theo, chúng ta sẽ bàn kỹ về tích chập ảnh với kernel và so sánh với tương quan chéo.
 
-Giả sử một cửa sổ con có kích thước $k \times k$ , với  $k$ là số lẻ, ta tính được **tương quan (correlation)** dựa trên công thức:
+Giả sử một cửa sổ con có kích thước $k \times k$ , với  $k$  là số lẻ, ta tính được **tương quan (correlation)** dựa trên công thức:
 $$
-I[i,j] = \frac{1}{k^2}\sum_{u=-\frac{k-1}{2}}^{\frac{k-1}{2}}\sum_{v=-\frac{k-1}{2}}^{\frac{k-1}{2}}I_0[i+u,j+v]
+I[i,j] = \frac{1}{k^2}\sum\_{u=-\frac{k-1}{2}}^{\frac{k-1}{2}}\sum\_{v=-\frac{k-1}{2}}^{\frac{k-1}{2}}I_0[i+u,j+v]
 \tag{1}
 $$
 
@@ -33,7 +33,7 @@ $$
 Bây giờ hãy thử thay các trọng số riêng rẻ bằng một ma trận chứa nhiều trọng số nào! Ta gọi ma trận đó là $K$.
 
 $$
-I[i,j] = \sum_{u=-\frac{k-1}{2}}^{\frac{k-1}{2}}\sum_{v=-\frac{k-1}{2}}^{\frac{k-1}{2}}K[u,v]I_0[i+u,j+v]
+I[i,j] = \sum\_{u=-\frac{k-1}{2}}^{\frac{k-1}{2}}\sum\_{v=-\frac{k-1}{2}}^{\frac{k-1}{2}}K[u,v]I_0[i+u,j+v]
 \tag{2}
 $$
 
@@ -43,9 +43,8 @@ Trong thư viện Scipy có sẵn hàm [scipy.ndimage.correlate](https://docs.sc
 
 ## 2.2. Nhiễu Gauss (Gaussian noise)
 Trong thực tế có 3 loại nhiễu thường gặp nhất: **nhiễu đốm (speckle noise)**, **nhiễu muối tiêu (pepper-and-salt noise)** và **nhiễu Gauss (Gaussian noise)**. Nhiễu đốm xuất hiện khi các sóng tới (sóng ánh sáng, siêu âm, điện từ,...) giao thoa với nhau tạo nên các điểm cực đại hoặc cực tiểu. Nhiễu muối tiêu xuất hiện do sự gián đoạn việc truyền/nhận tín hiệu giữa nguồn phát và cảm biến. **Nhiễu Gauss**, được đặt theo tên nhà toán học người Đức **Gauß** (hoặc Gauss), là một loại nhiễu có **mật độ xác suất (probability density)** tương ứng với **phân phối chuẩn (normal distribution)**. Hay nói cách khác, biểu đồ mà nhiễu Gauss tạo nên cũng có hình dạng cái chuông.
-<center><img src="VietCS Blog/Nhập môn Image filtering/Gaussian distribution.png" width=400> </center>
+<center><img src="https://raw.githubusercontent.com/leduckhai/My-Data-Container/master/VietCS%20Blog/Nh%E1%BA%ADp%20m%C3%B4n%20Image%20filtering/Gaussian%20distribution.png" width=400> </center>
 <center> Hình dạng cái chuông của phân phối Gauss (Gaussian distribution) </center>
-
 
 Công thức mật độ xác suất Gauss:
 $$
@@ -67,12 +66,12 @@ $$
 f(x,y) = f(x)f(y) = \frac{1}{2\pi\sigma^2}e^{-\frac{x^2+y^2}{2\sigma^2}}
 \tag{4}
 $$
-<center><img src='VietCS Blog/Nhập môn Image filtering/Gaussian 2D distribution.svg'width=400></center>
+<center><img src='https://raw.githubusercontent.com/leduckhai/My-Data-Container/master/VietCS%20Blog/Nh%E1%BA%ADp%20m%C3%B4n%20Image%20filtering/Gaussian%202D%20distribution.png'width=400></center>
 <center> Phân bố Gauss trong không gian 2D </center>
 
-Gọi $I_{noisy}$, $I_{0}$, $A_{noise}$ lần lượt là ma trận ảnh bị nhiễu Gauss, ma trận ảnh gốc và ma trận nhiễu Gauss thì ta sẽ có công thức:
+Gọi $I\_{noisy}$, $I\_{0}$, $A\_{noise}$ lần lượt là ma trận ảnh bị nhiễu Gauss, ma trận ảnh gốc và ma trận nhiễu Gauss thì ta sẽ có công thức:
 $$
-I_{noisy}{[i,j]} = I_{0}{[i,j]} + A_{noise}{[i,j]}
+I\_{noisy}{[i,j]} = I\_{0}{[i,j]} + A\_{noise}{[i,j]}
 \tag{5}
 $$
 
@@ -92,15 +91,14 @@ plt.subplot(121); plt.imshow(image, cmap='gray'); plt.title('Original') # Hiển
 plt.subplot(122); plt.imshow(img, cmap='gray'); plt.title('Noisy image') # Hiển thị ảnh bị nhiễu
 ```
 
-<center><img src='VietCS Blog/Nhập môn Image filtering/Gaussian noise output.PNG' width=400></center>
-
+<center><img src='https://raw.githubusercontent.com/leduckhai/My-Data-Container/master/VietCS%20Blog/Nh%E1%BA%ADp%20m%C3%B4n%20Image%20filtering/Gaussian%20noise%20output.PNG' width=400></center>
 <center> Kết quả thuật toán </center>
 
 ## 2.3. Bộ lọc trung bình (Mean filter)
 
 **Bộ lọc trung bình (mean filter)** được xếp vào loại **bộ lọc tuyến tính (linear filter)**. Kernel của bộ lọc trung bình là một ma trận kích thước $k\times k$ ($k$ là số lẻ) với các phần tử bằng 1. Đầu ra của bộ lọc sẽ là giá trị trung bình của tổng các phần tử nằm trong kernel nơi nó đi qua. Hại não quá hả? Thôi giải thích bằng hình ảnh cho dễ hiểu nha!
 
-<center><img src='VietCS Blog/Nhập môn Image filtering/Mean filter calculation.png' width=400></center>
+<center><img src='https://raw.githubusercontent.com/leduckhai/My-Data-Container/master/VietCS%20Blog/Nh%E1%BA%ADp%20m%C3%B4n%20Image%20filtering/Mean%20filter%20calculation.png' width=400></center>
 
 Các ma trận ở hàng trên là ma trận ảnh gốc, hàng dưới là ảnh xuất ra và vùng xám là kernel. Ta lấy ví dụ hình bên trái. Theo quy tắc tương quan chéo kernel với ảnh ở (2) thì ta có:
 
@@ -115,7 +113,7 @@ $$
 
 Có bạn thắc mắc: vậy đối với giá trị 10, tức vị trí $[1,1]$ của ma trận ảnh thì tính toán thế nào? Quả thật tại giá trị 10, kernel bị "thừa" ra ngoài nên không thể áp dụng nhân tương quan. Để giải quyết việc này, ta sẽ **đệm (pad)** ma trận ảnh. Hình dưới ta gọi kỹ thuật này là **zero padding**, tức đệm số 0.
 
-<center><img src='VietCS Blog/Nhập môn Image filtering/Zero padding.png' width=300></center>
+<center><img src='https://raw.githubusercontent.com/leduckhai/My-Data-Container/master/VietCS%20Blog/Nh%E1%BA%ADp%20m%C3%B4n%20Image%20filtering/Zero%20padding.png' width=300></center>
 
 Ảnh gốc và ảnh xuất chỉ có kích thước $4\times4$ thôi nhưng khi ta "đệm" số 0 vào các hàng và cột thì ta sẽ có ảnh gốc kích thước $6\times6$.  Thật ra còn nhiều kỹ thuật đệm khác như **đệm đối xứng (symmetric padding)**, **đệm phản chiếu (reflect padding)**, **đệm hằng số (constant padding)**, **đệm rìa (edge padding)** nhưng tui không tiện diễn giải vì chúng không tạo quá nhiều sự khác biệt với nhau khi xuất ảnh.
 
@@ -143,18 +141,15 @@ img_filt = mean_filter(img,9) # Gọi hàm số mean_filter và thực hiện t�
 plt.subplot(122), plt.imshow(img_filt),plt.title('Mean filter') # Hiển thị ảnh xuất
 ```
 
-<center><img src='VietCS Blog/Nhập môn Image filtering/Mean filter output.PNG' width=400></center>
-
+<center><img src='https://raw.githubusercontent.com/leduckhai/My-Data-Container/master/VietCS%20Blog/Nh%E1%BA%ADp%20m%C3%B4n%20Image%20filtering/Mean%20filter%20output.PNG' width=400></center>
 <center> Kết quả thuật toán </center>
-
 
 Trong ảnh gốc, da mặt Hạ Thảo lấm tấm nhiều nốt mụn đỏ (mà thực ra do tui dùng Paint chấm lên) nhưng sau khi qua bộ lọc thì chúng đã mờ đi rất nhiều. Trong thực tế, các ứng dụng selfie và photoshop dùng bộ lọc trung bình dưới dạng vùng khoanh nhỏ thay vì áp dụng vào toàn bộ khuôn hình như trên.
 
 ## 2.4. Bộ lọc Gauss (Gaussian filter)
 **Bộ lọc Gauss (Gaussian filter)** được dùng nhiều hơn bộ lọc trung bình vì những ưu điểm vượt trội của nó. Bộ lọc Gauss tuân thủ phân bố ... Gauss nhưng dưới thể rời rạc. Kernel kích thước $3\times3$ và $5\times5$ với một tham số $\sigma$ cụ thể sẽ nhìn giống thế này:
 
-<center><img src='VietCS Blog/Nhập môn Image filtering/Gaussian kernel.PNG' width=300></center>
-
+<center><img src='https://github.com/leduckhai/My-Data-Container/blob/master/VietCS%20Blog/Nh%E1%BA%ADp%20m%C3%B4n%20Image%20filtering/Gaussian%20kernel.PNG?raw=true' width=300></center>
 
 
 Bây giờ ta bắt tay vào viết code luôn. Thư viện scikit-image có hỗ trợ hàm [skimage.filters.gaussian](https://scikit-image.org/docs/dev/api/skimage.filters.html#skimage.filters.gaussian) để lọc Gauss.
@@ -175,17 +170,15 @@ img_filt = gaussian(img,sigma=2.2, multichannel=True)
 plt.subplot(122), plt.imshow(img_filt), plt.title('Gaussian filter')
 ```
 
-<center><img src='VietCS Blog/Nhập môn Image filtering/Gaussian filter output.PNG' width=400></center>
-
+<center><img src='https://raw.githubusercontent.com/leduckhai/My-Data-Container/master/VietCS%20Blog/Nh%E1%BA%ADp%20m%C3%B4n%20Image%20filtering/Gaussian%20filter%20output.PNG' width=400></center>
 <center>Kết quả thuật toán</center>
-
 
 So sánh với bộ lọc trung bình, các bạn hãy để ý thấy rằng phần tóc, chân mày và con ngươi của Hạ Thảo không bị "quá mờ" so với làn da và nền. Trong thị giác máy tính, viền (ví dụ biên giới giữa tóc và da) đóng vai trò quan trọng trong thuật toán nhận diện vật thể và tách ảnh. Vì vậy, việc loại bỏ nhiễu nhưng vẫn giữ lại viền được khuyến nghị. Đó cũng chính là ưu điểm của bộ lọc Gauss: **bảo tồn viền (edge preserving)**.
 
 ## 2.5. Bộ lọc trung vị (Median filter)
 **Bộ lọc trung vị (median filter)** được xếp vào loại **bộ lọc phi tuyến tính (non-linear filter)**. Bộ lọc trung vị hoạt động giống như bộ lọc trung bình, nhưng thay vì xuất ra giá trị trung bình, nó xuất ra trung vị của các phần tử trong cửa sổ mà nó đi qua. Giả sử ta có một kernel kích thước $3\times3$:
 
-<center><img src='VietCS Blog/Nhập môn Image filtering/Median filter how it works.gif' width=400></center>
+<center><img src='https://raw.githubusercontent.com/leduckhai/My-Data-Container/master/VietCS%20Blog/Nh%E1%BA%ADp%20m%C3%B4n%20Image%20filtering/Median%20filter%20how%20it%20works.gif' width=400></center>
 
 Các phần tử trong kernel là: 124, 126, 127, 120, 150, 125, 115, 119, 123. Trong đó trung vị là: 124. Vậy tại vị trí tâm của kernel, tức vị trí giá trị 150 sẽ xuất ra trung vị 124.
 
@@ -211,17 +204,15 @@ img_filt = median(img_n,selem=kernel)
 plt.subplot(133), plt.imshow(img_filt, cmap='gray'), plt.title('Median filter')
 ```
 
-<center><img src='VietCS Blog/Nhập môn Image filtering/Median filter output.PNG' width=600></center>
-
+<center><img src='https://raw.githubusercontent.com/leduckhai/My-Data-Container/master/VietCS%20Blog/Nhập%20môn%20Image%20filtering/Median%20filter%20output.PNG' width=600></center>
 <center>Kết quả thuật toán</center>
-
 
 ## 2.6. So khớp mẫu bằng bộ lọc (template matching with filters)
 Hãy tưởng tượng bạn muốn tìm người quen giữa rừng người mênh mông. **Template matching** sẽ giúp bạn trong trường hợp này.
 
 Trước hết bạn phải tìm một bức ảnh chụp người ấy, gọi là **mẫu (template)**, để đối chiếu với ảnh gốc (tức ảnh chụp cả rừng người dưới đây. Ô màu xanh lá là ô xác định tìm thấy người quen bạn sau khi chạy thuật toán **so khớp mẫu**.
 
-<center><img src='VietCS Blog/Nhập môn Image filtering/Template matching example.PNG' width=500></center>
+<center><img src='https://raw.githubusercontent.com/leduckhai/My-Data-Container/master/VietCS%20Blog/Nh%E1%BA%ADp%20m%C3%B4n%20Image%20filtering/Template%20matching%20example.PNG' width=500></center>
 
 Từ công thức (2), ta thay $K[u,v]$ bằng $T[u,v]$, viết tắt cho template và rút gọn ký hiệu $\sum$:
 $$
@@ -231,14 +222,14 @@ $$
 
 Bây giờ ta chuẩn hóa phương trình (6):
 $$
-I[i,j] = \frac{\sum_{u,v=-\frac{k-1}{2}}^{\frac{k-1}{2}}T[u,v]I_0[i+u,j+v]}{\sqrt{\sum_{u,v=-\frac{k-1}{2}}^{\frac{k-1}{2}}T[u,v]^2
-\sum_{u,v=-\frac{k-1}{2}}^{\frac{k-1}{2}}I_0[i+u,j+v]^2}}
+I[i,j] = \frac{\sum\_{u,v=-\frac{k-1}{2}}^{\frac{k-1}{2}}T[u,v]I_0[i+u,j+v]}{\sqrt{\sum\_{u,v=-\frac{k-1}{2}}^{\frac{k-1}{2}}T[u,v]^2
+\sum\_{u,v=-\frac{k-1}{2}}^{\frac{k-1}{2}}I_0[i+u,j+v]^2}}
 \tag{7}
 $$
 
 Phương trình (7) được gọi là **tương quan chéo chuẩn hóa (normalized cross-correlation)**. Áp dụng (7) ta sẽ ra kết quả như sau:
 
-<center><img src='VietCS Blog/Nhập môn Image filtering/Template matching result.PNG'width=500></center>
+<center><img src='https://raw.githubusercontent.com/leduckhai/My-Data-Container/master/VietCS%20Blog/Nh%E1%BA%ADp%20m%C3%B4n%20Image%20filtering/Template%20matching%20result.PNG'width=500></center>
 
 Nhìn vào ảnh đã được so khớp mẫu, bạn có thấy chấm màu trắng trong vùng khoanh tròn không? Đó là điểm có độ sáng (**intensity**) lớn nhất và cũng là tâm của mẫu được xác định. Phương trình (7) đạt giá trị lớn nhất chỉ khi giá trị các phần tử của mẫu đúng bằng cửa sổ con.
 
@@ -290,13 +281,12 @@ print('Vị trí chấm sáng nhất là: (i,j) = (%d,%d)' %(x,y))
 
     Vị trí chấm sáng nhất là: (i,j) = (75,170)
 
-<center><img src='VietCS Blog/Nhập môn Image filtering/Template matching output.PNG'width=400></center>
-
+<center><img src='https://raw.githubusercontent.com/leduckhai/My-Data-Container/master/VietCS%20Blog/Nh%E1%BA%ADp%20m%C3%B4n%20Image%20filtering/Template%20matching%20output.PNG'width=400></center>
 <center>Kết quả thuật toán</center>
 
 Trong so khớp mẫu, tui phải nhắc đến 2 điều. Điều thứ nhất: ngoài phương trình **normalized cross-correlation (NCC)**, người ta còn dùng phương trình **tổng các hiệu số tuyệt đối (sum of absolute differences)**, vì e các bạn "tẩu hỏa nhập ma" nên tui sẽ đề cập đến khi VietCS đủ lớn. Điều thứ hai: trong các bài toán thực tế, bạn sẽ không có một mẫu giống y chang trong ảnh gốc. Mẫu bạn có sẽ như thế này:
 
-<center><img src='VietCS Blog/Nhập môn Image filtering/Non identical template matching.PNG'width=350></center>
+<center><img src='https://raw.githubusercontent.com/leduckhai/My-Data-Container/master/VietCS%20Blog/Nh%E1%BA%ADp%20m%C3%B4n%20Image%20filtering/Non%20identical%20template%20matching.PNG'width=350></center>
 
 Rõ ràng vật thể trong mẫu và ảnh gốc khác nhau mặc dù chúng đều là xe. Vì thế thuật toán so khớp mẫu cần phải cải tiến thêm, cụ thể là phải ứng dụng các **mạng thần kinh tích chập (convolution neural network)**. Ta cũng sẽ bàn đến cái này sau.
 
@@ -305,7 +295,7 @@ Rõ ràng vật thể trong mẫu và ảnh gốc khác nhau mặc dù chúng đ
 
 Phương trình tương quan chéo giữa ảnh và kernel:
 $$
-I[i,j] = \sum_{u=-\frac{k-1}{2}}^{\frac{k-1}{2}}\sum_{v=-\frac{k-1}{2}}^{\frac{k-1}{2}}K[u,v]I_0[i+u,j+v]
+I[i,j] = \sum\_{u=-\frac{k-1}{2}}^{\frac{k-1}{2}}\sum\_{v=-\frac{k-1}{2}}^{\frac{k-1}{2}}K[u,v]I_0[i+u,j+v]
 \tag{2}
 $$
 
