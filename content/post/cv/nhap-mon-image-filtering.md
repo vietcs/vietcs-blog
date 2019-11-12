@@ -18,11 +18,13 @@ slug: nhap-mon-image-filtering
 
 ## <span style="color:blue">1. Giới thiệu </span>
 
-Khi nhận được ảnh từ các tín hiệu truyền dẫn, hệ thống sẽ không xuất ngay mà phải qua các giai đoạn xử lý, một trong số đó là giai đoạn **áp bộ lọc (image filtering)**. 
+Khi nhận được ảnh từ camera, hệ thống sẽ không xuất ngay mà phải qua các giai đoạn xử lý, một trong số đó là giai đoạn **áp bộ lọc (image filtering)**. 
 
 Filter (hay tiếng Việt là bộ lọc) được dùng rất nhiều trong thị giác máy tính, nhằm loại bỏ nhiễu (**denoising**), làm mờ ảnh (**blurring**), làm mượt (**smoothing**), cân bằng các giá trị pixel trong ảnh (**equalization**), nhận diện viền (**edge detection**), trích xuất đặc trưng (**feature extraction**), so khớp mẫu (**template matching**),... thông qua tương quan chéo hoặc tích chập giữa **kernel** với ảnh hoặc ngược lại.
 
 **Gợi ý: Độc giả không có nhu cầu hiểu mấu chốt các thuật toán có thể kéo thẳng xuống phần 3. Tóm tắt kiến thức. Code đầy đủ dưới dạng Notebook tại [đây]( [https://github.com/leduckhai/My-Data-Container/blob/master/VietCS%20Blog/VietCS%20code/Nh%E1%BA%ADp%20m%C3%B4n%20Image%20filtering.ipynb](https://github.com/leduckhai/My-Data-Container/blob/master/VietCS Blog/VietCS code/Nhập môn Image filtering.ipynb) )**
+
+## <span style="color:blue">2. Bài giảng  </span>
 
 ## <span style="color:blue">2.1. Bộ lọc tương quan (Correlation filter)  </span>
 Để áp dụng một bộ lọc vào ảnh, ta cần **kernel**. Kernel có thể được hiểu như lõi, là một ma trận mang tính chất đặc trưng quyết định đầu ra của ảnh thông qua thuật toán lọc ảnh [1]. Ở bài tiếp theo, chúng ta sẽ bàn kỹ về tích chập ảnh với kernel và so sánh với tương quan chéo.
@@ -141,7 +143,9 @@ Trong ảnh gốc, da mặt Hạ Thảo lấm tấm nhiều nốt mụn đỏ (m
 **Bộ lọc Gauss (Gaussian filter)** được dùng nhiều hơn bộ lọc trung bình vì những ưu điểm vượt trội của nó. Bộ lọc Gauss tuân thủ phân bố ... Gauss nhưng dưới thể rời rạc. Kernel kích thước $3\times3$ và $5\times5$ với một tham số $\sigma$ cụ thể sẽ nhìn giống thế này:
 
 <center><img src='https://github.com/leduckhai/My-Data-Container/blob/master/VietCS%20Blog/Nh%E1%BA%ADp%20m%C3%B4n%20Image%20filtering/Gaussian%20kernel.PNG?raw=true' width=300></center>
- Vì xác xuất phân bố nhiễu Gauss tập trung như hình chuông nên như hình trên ta thấy giá trị ở trung tâm bộ lọc sẽ mang trọng số lớn nhất, càng ra xa rìa thì trọng số càng giảm. Bây giờ ta bắt tay vào viết code luôn. Thư viện scikit-image có hỗ trợ hàm [skimage.filters.gaussian](https://scikit-image.org/docs/dev/api/skimage.filters.html#skimage.filters.gaussian) để lọc Gauss.
+ Vì xác xuất phân bố nhiễu Gauss tập trung như hình chuông nên như hình trên ta thấy giá trị ở trung tâm bộ lọc sẽ mang trọng số lớn nhất, càng ra xa rìa thì trọng số càng giảm. Tổng các phần tử trong kernel bằng 1. Nếu tổng lớn hơn 1, giá trị trung bình của ảnh sau tương quan chéo sẽ tăng mạnh khiến ảnh bị lóa. Nếu tổng bé hơn 1, ảnh sẽ tối đi. 
+
+Bây giờ ta bắt tay vào viết code luôn. Thư viện scikit-image có hỗ trợ hàm [skimage.filters.gaussian](https://scikit-image.org/docs/dev/api/skimage.filters.html#skimage.filters.gaussian) để lọc Gauss.
 
 ```python
 from skimage.filters import gaussian
@@ -221,7 +225,7 @@ Vị trí chấm sáng nhất là: (i,j) = (75,170)
 
 <center><img src='https://raw.githubusercontent.com/leduckhai/My-Data-Container/master/VietCS%20Blog/Nh%E1%BA%ADp%20m%C3%B4n%20Image%20filtering/Template%20matching%20output.PNG'width=400></center>
 <center>Kết quả thuật toán</center>
-Trong so khớp mẫu, tôi phải nhắc đến 2 điều. Điều thứ nhất: ngoài phương trình **normalized cross-correlation (NCC)**, người ta còn dùng phương trình **tổng các hiệu số tuyệt đối (sum of absolute differences)** [9], tôi sẽ đề cập đến khi VietCS đủ lớn. Điều thứ hai: trong các bài toán thực tế, bạn sẽ không có một mẫu giống y chang trong ảnh gốc. Mẫu bạn có sẽ như thế này:
+Trong so khớp mẫu, tôi phải nhắc đến 2 điều. Điều thứ nhất: ngoài phương trình **normalized cross-correlation (NCC)**, người ta còn dùng phương trình **tổng các hiệu số tuyệt đối (sum of absolute differences)** [9], tôi sẽ đề cập sau này. Điều thứ hai: trong các bài toán thực tế, bạn sẽ không có một mẫu giống y chang trong ảnh gốc. Mẫu bạn có sẽ như thế này:
 
 <center><img src='https://raw.githubusercontent.com/leduckhai/My-Data-Container/master/VietCS%20Blog/Nh%E1%BA%ADp%20m%C3%B4n%20Image%20filtering/Non%20identical%20template%20matching.PNG'width=350></center>
 Tuy hai chiếc xe khác nhau về hình dáng, chủng loại, nhưng chúng có cùng một số đặc điểm chung như khung xe màu trắng và bánh xe màu đen. Vì thế thuật toán nói trên vẫn hoạt động hiệu quả. Trong một trường hợp khác, hai chiếc xe có các vùng sáng tối, góc chụp hoàn toàn khác nhau thì thuật toán trên sẽ không nhận diện được. Ta cần cải thiện thêm thuật toán này, cụ thể là phải ứng dụng các **mạng thần kinh tích chập (convolution neural network)**. Ta cũng sẽ bàn đến cái này sau.
