@@ -1,4 +1,15 @@
-
+---
+title: "Harris: Thuật toán phát hiện góc"
+date: 2019-11-12T13:34:08+07:00
+draft: false
+authors: ["tuyenhs"]
+categories:
+- computer vision
+tags:
+- harris
+- vision
+slug: vietcs/post/cv/Harris
+---
 
 <img src='https://scontent.fsgn3-1.fna.fbcdn.net/v/t1.0-9/74698890_1305517486297127_1169934286678130688_n.jpg?_nc_cat=111&_nc_oc=AQmdKz1I6D-shTzsXioDqVmq38whl-T-7DtaHVquhDvyHoHvTfClDRQWDPyBiykgJhk&_nc_ht=scontent.fsgn3-1.fna&oh=666cd336bbfdbd941a15ecc9e9fb8f2a&oe=5E41B75A'>
 
@@ -6,10 +17,10 @@
 
 #### 1.1. Mỗi ảnh đều có những điểm nổi bật riêng.
 
-Chụp ảnh toàn cảnh (Panorama) đã trở nên rất quen thuật trong nhiếp ảnh. Ở đó máy tính có nhiệm vụ ghép nhiều ảnh ở các góp chụp khác nhau một cách tự nhiên nhất. Nếu bạn phải thay thế máy tính làm công việc này, bạn sẽ ghép hai tấm ảnh sau như thế nào?
+Chụp ảnh toàn cảnh (Panorama) đã trở nên rất quen thuộc trong nhiếp ảnh. Ở đó máy tính có nhiệm vụ ghép nhiều ảnh ở các góp chụp khác nhau một cách tự nhiên nhất. Nếu bạn phải thay thế máy tính làm công việc này, bạn sẽ ghép hai tấm ảnh sau như thế nào?
 
 <p>
-    <img src='https://scontent.fsgn3-1.fna.fbcdn.net/v/t1.0-9/75362466_1303432549838954_8245530063705997312_n.jpg?_nc_cat=104&_nc_oc=AQm8-HLpr_qGbiT8eLXYFq-xO-Pr_612I3ap8ud_Z9D-DhRPC5cRqZquBxEHDXh0qdI&_nc_ht=scontent.fsgn3-1.fna&oh=24c0c3daf9460453399bca9ccf356690&oe=5E4EAFFA'>
+    <img src='https://scontent.fsgn4-1.fna.fbcdn.net/v/t1.0-9/72176098_1306438322871710_2361752561305780224_n.jpg?_nc_cat=103&_nc_oc=AQk5084m16LZ6FBfX9iuI9qdhnhGkjenL4RyE1Wm3Sf--ReDJF5ffiLXiC5YQg9FVxk&_nc_ht=scontent.fsgn4-1.fna&oh=a39e94366e54df53837039aefc52dc47&oe=5E54E3F2'>
     <center><caption>Hình 1: Bạn sẽ chọn điểm nào?</caption></center>
 </p>
 
@@ -29,7 +40,7 @@ Việc phát hiện những điểm "nổi bật" nói chung hay góc nói riên
 
 <p>
 	<img src='https://www.robots.ox.ac.uk/~vgg/practicals/instance-recognition/images/cover.png' width=500>
-    <center><caption>Hình 2: Bài toán nhận diện ở mức thực thể (Instance Regconition) [1]</caption></center>
+    <center><caption>Hình 2: Phát hiện các góc giúp ta dễ dàng nhận diện đây là tòa nhà ở trường Souls thuộc đại học Oxford (Bài toán nhận diện ở mức thực thể) [1]</caption></center>
 </p>
 
 ### 2. Thuật toán phát hiện góc Harris là gì?
@@ -105,8 +116,8 @@ $$
 - **Bước 1:** Tính toán đạo ảnh $I_x$ (theo trục $O_x$) và $I_y$ (theo trục $O_y$) . Ở đây dùng bộ lọc Sobel [7] để tìm đạo hàm cho ảnh.
 
 ```python
-ix = ndimage.sobel(img, 0)
-iy = ndimage.sobel(img, 1)
+ix = cv2.Sobel(img, cv2.CV_64F, 1, 0, ksize=3)
+iy = cv2.Sobel(img, cv2.CV_64F, 0, 1, ksize=3)
 ```
 
 - **Bước 2:** Tính A, B, C trong ma trận $M$ tương ứng $$I_x^2, I_{x,y}, I_y^2$$ 
@@ -122,9 +133,9 @@ Lưu ý, phép nhân ở đây là phép nhân từng phần tử với nhau ch�
 - **Bước 3:** Lọc nhiễu $$I_x^2, I_{x,y}, I_y^2$$ bằng bộ lọc (ở đây dùng Gaussian [8])
 
 ```python
-ix2 = ndimage.gaussian_filter(ix2, sigma=2)
-iy2 = ndimage.gaussian_filter(iy2, sigma=2)
-ixy = ndimage.gaussian_filter(ixy, sigma=2)
+ix2 = cv2.GaussianBlur(ix2, (3,3), 0)
+iy2 = cv2.GaussianBlur(iy2, (3,3), 0)
+ixy = cv2.GaussianBlur(ixy, (3,3), 0)
 ```
 
 - **Bước 4:** Tính ma trận $r$ là tập hợp điểm $f$ cho mỗi điểm ảnh
@@ -165,8 +176,8 @@ import cv2
 # Hàm phát hiện góc bằng thuật toán Harris
 def Harris(img):
     # Tính đạo hàm theo trục Ox và Oy
-	ix = ndimage.sobel(img, 0)
-	iy = ndimage.sobel(img, 1)
+	ix = cv2.Sobel(img, cv2.CV_64F, 1, 0, ksize=3)
+	iy = cv2.Sobel(img, cv2.CV_64F, 0, 1, ksize=3)
 	
     # Tính các thành phần A, C, B
 	ix2 = ix * ix
@@ -174,9 +185,9 @@ def Harris(img):
 	ixy = ix * iy
 
     # Lọc nhiễu A, B, C bằng bộ lọc Gaussian
-	ix2 = ndimage.gaussian_filter(ix2, sigma=2)
-	iy2 = ndimage.gaussian_filter(iy2, sigma=2)
-	ixy = ndimage.gaussian_filter(ixy, sigma=2)
+    ix2 = cv2.GaussianBlur(ix2, (3,3), 0)
+    iy2 = cv2.GaussianBlur(iy2, (3,3), 0)
+    ixy = cv2.GaussianBlur(ixy, (3,3), 0)
 
 	result = np.zeros((img.shape[0], img.shape[1]))
 	r = np.zeros((img.shape[0], img.shape[1]))
