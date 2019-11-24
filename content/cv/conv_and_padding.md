@@ -164,7 +164,7 @@ Bài viết này cung cấp cho bạn kiến thức cơ bản về *Convolution*
   from scipy import ndimage
   
   # Load ảnh
-  img = cv2.imread('oencv.png',0)
+  img = cv2.imread('đường dẫn ảnh',0)
   
   # Khởi tạo ma trận bộ lọc
   kernel = np.asanyarray([-1,0,1,-2,0,2,-1,0,1]).reshape((3,3))
@@ -286,6 +286,14 @@ Bài viết này cung cấp cho bạn kiến thức cơ bản về *Convolution*
       <center><caption><i>Wrap padding</i></caption></center>
 
 *Thư viện OpenCV hỗ trợ khá đầy đủ phần này, các bạn có thể tham khảo ở [đây](https://www.sharebook.site/2017/08/13/opencv-basic-images-operations/).*
+
+**Tổng hợp các phương pháp padding ở trên:**
+
+<p>
+    <img src = 'https://raw.githubusercontent.com/khoaxxx238/DOC/master/img/padding.png' width=600>
+</p>
+
+
 
 ## **Tham khảo:**
 
